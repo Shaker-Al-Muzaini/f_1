@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 class Date{
   late final String name;
-  late final String opject;
+   String? opject;
   Date({
     required this.name,
     required this.opject,
@@ -143,7 +143,7 @@ List<Date>DeteInfo=[
                     start: 50,
                   ),
                   child: Text(
-                    D.opject, //  textWidthBasis:,
+                    D.opject!, //  textWidthBasis:,
                     textAlign: TextAlign.center,
                     style:const TextStyle(
                       fontSize: 30,
@@ -179,4 +179,5 @@ List<Date>DeteInfo=[
           ]
       )
   );
+
 }
