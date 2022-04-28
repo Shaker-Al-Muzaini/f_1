@@ -1,11 +1,8 @@
 // ignore_for_file: file_names, avoid_unnecessary_containers
-
 import 'package:flutter/material.dart';
-
 class Date{
   late final String name;
   late final String opject;
-
   Date({
     required this.name,
     required this.opject,
@@ -13,10 +10,8 @@ class Date{
 });
 }
 
-
 // ignore: camel_case_types, must_be_immutable
 class Home_Page extends StatelessWidget{
-
 // ignore: non_constant_identifier_names
 List<Date>DeteInfo=[
   Date(
@@ -29,7 +24,7 @@ List<Date>DeteInfo=[
   ),
   Date(
     name:'السكان',
-    opject:'358000نسمه',
+    opject:'35800نسمه',
   ),
   Date(
     name:'الدولة',
@@ -42,7 +37,7 @@ List<Date>DeteInfo=[
 
 ];
 
-  Home_Page({Key? key}) : super(key: key);
+ Home_Page({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,12 +100,13 @@ List<Date>DeteInfo=[
             style:TextStyle(
               fontSize:24,
               fontFamily:'cairo', )),
-            const SizedBox(height:1),
+            const SizedBox(height:0),
             ListView.separated(
               shrinkWrap:true,
+              physics:const NeverScrollableScrollPhysics(),
               itemBuilder:(context,index)=>Deta(DeteInfo[index]),
               separatorBuilder:(context,index)
-              =>const SizedBox (height:1),
+              =>const SizedBox (height:0),
               itemCount:DeteInfo.length,
             )
           ],
